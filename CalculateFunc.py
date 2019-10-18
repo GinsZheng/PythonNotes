@@ -20,4 +20,3 @@ Round = round(0.51)
 print('round: %r' % Round) #四舍五入。注：精度要求高时，导入 decimal 模块处理
 Round2 = round(56.659, 1)
 print('round2: %r' % Round2) #四舍五入到特定小数位(参数2：小数位)
-
