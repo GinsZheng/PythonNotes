@@ -1,7 +1,7 @@
-# range() 生成一个范围内的数字
+# range() 生成一个范围内的数值
 nums = range(1, 5)
 for num in nums:
-    print(num)
+    print(num) # ➤ 1 2 3 4 (4行)
     # range 返回一个序列，但不是数组，前闭后开区间
 
 # range转为数组
