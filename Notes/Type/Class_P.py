@@ -1,12 +1,12 @@
 # 类、构造函数、调用
 class Dog():
     #构造函数
-    def __init__(self, name, age):
+    def __init__(self, name, age, steps_total=0):
         # 初始化属性
         self.name = name
         self.age = age
         self.color = "blue" #设定默认值时，可以不放入构造函数的参数
-        self.steps_total = 0
+        self.steps_total = steps_total
         # 初始化的属性可以被所有函数使用
         # 初始化属性相当于直接定义了一个变量 self.xxx。
 
@@ -63,5 +63,24 @@ doggy = Doggy("Little Yellow")
 doggy.getColor()
 doggy.suckle()
 doggy.roll_over()
+
+
+# 将实例用作属性
+# 作用：更深层的引用
+class Battery():
+
+    def __init__(self, battery_size=70):
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        print("This car has a " + str(self.battery_size) + "-kWh battery")
+
+class ElectricCar():
+    def __init__(self):
+        self.battery = Battery()  #实例用作属性。当Battery类有扩展时，ElectricCar的battery属性能直接引用
+
+# 调用
+tesla = ElectricCar()
+tesla.battery.describe_battery()
 
 
