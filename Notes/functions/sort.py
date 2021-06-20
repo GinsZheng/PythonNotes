@@ -17,3 +17,7 @@ print("赋值后永久化", cars2)
 cars.reverse()
 print('reverse ➤ ', cars)
 
+# 有key的排序  
+L = ['abc', 'aBe', 'ABD']
+L.sort(key=str.lower)  # 将字母全转成再排序  
+print("有key的排序", L) # ➤ ['ABD', 'aBe', 'abc']  

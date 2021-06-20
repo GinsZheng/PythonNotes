@@ -6,3 +6,4 @@ print(line) # ➤ '[1,2,3]' | 字符串
 print(eval(line)) # ➤ [1, 2, 3] | 把字符串转为列表
 
 L = eval(line)
+
